@@ -4,6 +4,6 @@ readonly HOSTS=( "main"  "alice"  "bob"  "centos"  "registry" )
 
 for i in "${HOSTS[@]}"; do
     NAME=$i
-    vagrant up --provision $NAME
+    vagrant up --provider virtualbox --provision $NAME
     vagrant halt
 done
