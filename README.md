@@ -22,7 +22,19 @@ Read the documents:
   - [行前準備 Part 2：預載範例程式碼](config.md) ☚ 建議等開課前一週再進行。
 
 
+## Companion Slides
+
+View slides online: http://bit.ly/docker-slides
+
+FYI, the `gh-pages` branch stores the slide files, mostly in markdown format.
+
+
 ## History
+
+
+**v3.0** / 第三梯次 (2015-04-11)
+
+  - 簡化 Vagrant 環境設定程序。
 
 
 **v2.0** / 第二梯次 (2015-03-07)
