@@ -20,9 +20,9 @@ Vagrant.configure(2) do |config|
         node.vm.box = "williamyeh/ubuntu-trusty64-docker"
         node.vm.box_version = ">= 1.5.0"
 
-        node.vm.network "private_network", ip: "10.0.0.10"
+        node.vm.network "private_network", ip: "10.0.1.10"
         node.vm.provision "hosts" do |hosts|
-            hosts.add_host '10.0.0.200', ['registry.com', 'registry']
+            hosts.add_host '10.0.1.200', ['registry.com', 'registry']
         end
 
         for i in FORWARDED_PORT_RANGE
@@ -48,9 +48,9 @@ Vagrant.configure(2) do |config|
         node.vm.box = "williamyeh/ubuntu-trusty64-docker"
         node.vm.box_version = ">= 1.5.0"
 
-        node.vm.network "private_network", ip: "10.0.0.11"
+        node.vm.network "private_network", ip: "10.0.1.11"
         node.vm.provision "hosts" do |hosts|
-            hosts.add_host '10.0.0.200', ['registry.com', 'registry']
+            hosts.add_host '10.0.1.200', ['registry.com', 'registry']
         end
 
         node.vm.synced_folder ".", SYNCED_FOLDER
@@ -67,9 +67,9 @@ Vagrant.configure(2) do |config|
         node.vm.box = "williamyeh/ubuntu-trusty64-docker"
         node.vm.box_version = ">= 1.5.0"
 
-        node.vm.network "private_network", ip: "10.0.0.12"
+        node.vm.network "private_network", ip: "10.0.1.12"
         node.vm.provision "hosts" do |hosts|
-            hosts.add_host '10.0.0.200', ['registry.com', 'registry']
+            hosts.add_host '10.0.1.200', ['registry.com', 'registry']
         end
 
         node.vm.synced_folder ".", SYNCED_FOLDER
@@ -83,7 +83,7 @@ Vagrant.configure(2) do |config|
 
     config.vm.define "centos" do |node|
         node.vm.box = "chef/centos-5.11"
-        node.vm.network "private_network", ip: "10.0.0.30"
+        node.vm.network "private_network", ip: "10.0.1.30"
 
         node.vm.synced_folder ".", SYNCED_FOLDER
 
@@ -102,9 +102,9 @@ Vagrant.configure(2) do |config|
         node.vm.box = "williamyeh/insecure-registry"
         node.vm.box_version = ">= 1.5.0"
 
-        node.vm.network "private_network", ip: "10.0.0.200"
+        node.vm.network "private_network", ip: "10.0.1.200"
         node.vm.provision "hosts" do |hosts|
-            hosts.add_host '10.0.0.200', ['registry.com', 'registry']
+            hosts.add_host '10.0.1.200', ['registry.com', 'registry']
         end
 
         node.vm.synced_folder ".", SYNCED_FOLDER
